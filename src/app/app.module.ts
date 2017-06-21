@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { ApiEclassService } from './services/api-eclass.service';
-import { TreeComponent } from './components/tree/tree.component'
+import { TreeComponent } from './components/tree/tree.component';
+import { FilterListComponent } from './components/filter-list/filter-list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    TreeComponent
+    TreeComponent,
+    FilterListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,13 @@
+<input type="text" #filterName placeholder="Filter name"> 
+<button (click)="saveFilter(filterName.value, tree)">Save filter</button>
+<p>
 <tree-root
   #tree
   [nodes]="nodes"
   [options]="treeOptions"
   (onActivate)="selectNode($event)">
 
-  <template #treeNodeTemplate let-node="node" let-index="index" >
+  <ng-template #treeNodeTemplate let-node="node" let-index="index" >
     <input
       (change)="check( node, $event)"
       type="checkbox"
@@ -12,5 +15,5 @@
       [checked]="node.data.checked">
 
       {{ node.data.name }}
-  </template>
+  </ng-template>
 </tree-root>
