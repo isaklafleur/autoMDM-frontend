@@ -1,0 +1,6 @@
+<button (click)="loadFullTree()">Load full tree</button>
+
+<div *ngFor="let filter of filters">
+  <span class="filter-item" (click)="loadFilter(filter._id)">{{filter.name}}</span>
+</div>
+
